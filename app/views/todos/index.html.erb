@@ -1,0 +1,10 @@
+<h1>To-dos</h1>
+
+<table>
+  <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.title %></td>
+      <td><%= todo.completed %></td>
+    </tr>
+  <% end %>
+</table>

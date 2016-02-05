@@ -1,0 +1,16 @@
+<%= form_for :todo, url: todos_path do |todo| %>
+
+  <p>
+    <%= todo.label :title %>
+    <%= todo.text_field :title %>
+  </p>
+
+  <p>
+    <%= todo.label :notes %>
+    <%= todo.text_area :notes %>
+  </p>
+
+  <p>
+    <%= todo.submit %>
+  </p>
+<% end %>
