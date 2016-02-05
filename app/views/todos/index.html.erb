@@ -1,6 +1,10 @@
 <h1>To-dos</h1>
 
 <table>
+  <tr>
+    <th>Title</th>
+    <th>Status</th>
+  </tr>
   <% @todos.each do |todo| %>
     <tr>
       <td><%= link_to todo.title, edit_todo_path(todo) %></td>
