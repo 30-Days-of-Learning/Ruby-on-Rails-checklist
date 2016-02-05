@@ -3,7 +3,7 @@
 <table>
   <% @todos.each do |todo| %>
     <tr>
-      <td><%= todo.title %></td>
+      <td><%= link_to todo.title, edit_todo_path(todo) %></td>
       <td><%= todo.completed %></td>
     </tr>
   <% end %>

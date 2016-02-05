@@ -1,4 +1,4 @@
-<%= form_for :todo, url: todos_path do |todo| %>
+<%= form_for @todo do |todo| %>
 
   <p>
     <%= todo.label :title %>
@@ -8,6 +8,11 @@
   <p>
     <%= todo.label :notes %>
     <%= todo.text_area :notes %>
+  </p>
+
+  <p>
+    <%= todo.label :completed %>
+    <%= todo.check_box :completed %>
   </p>
 
   <p>
