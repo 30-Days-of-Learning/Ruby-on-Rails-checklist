@@ -1,4 +1,4 @@
-class AddColumnNameToTodos < ActiveRecord::Migration
+class AddBooleanToTodos < ActiveRecord::Migration
   def change
     add_column :todos, :completed, :boolean
   end
