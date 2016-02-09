@@ -42,8 +42,18 @@ class TodosController < ApplicationController
   def complete
     @todo = Todo.find(params[:id])
 
-    if @todo.update(completed: true)
-      redirect_to todos_path
+    if @todo.completed?
+      if @todo.update(completed: false)
+        redirect_to todos_path
+      else
+        render 'edit'
+      end
+    else
+      if @todo.update(completed: true)
+        redirect_to todos_path
+      else
+        render 'edit'
+      end
     end
   end
 
