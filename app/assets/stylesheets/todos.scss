@@ -1,3 +1,57 @@
 // Place all the styles related to the todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$dark-color:  #4b4b4b;
+$link-color:  #9e0000;
+
+html {
+  background-color: $dark-color;
+  color: $dark-color;
+  padding: 0 2em;
+}
+
+body {
+  background-color: ivory;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid $link-color;
+  border-radius: 15px;
+  padding: 2em;
+  margin-top: 2em;
+  font-family: Ubuntu, sans-serif;
+}
+
+a {
+  &, &:active, &:visited { color: $link-color; }
+}
+
+h1 {
+  font-family: Kreon, serif;
+  &:first-child { margin-top: 0; }
+}
+
+table {
+  width: 100%;
+}
+
+th { text-align: left; }
+
+td {
+  padding: 0.3em;
+
+  &.date { font-style: italic; }
+}
+
+.actions {
+  width: 3em;
+  text-align: right;
+}
+
+.completed {
+  font-style: italic;
+  text-decoration: line-through;
+  color: gray;
+}
+

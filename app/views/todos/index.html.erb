@@ -1,13 +1,12 @@
 <h1>To-dos</h1>
-<%= link_to "Add new todo", new_todo_path %>
 
+<p><%= link_to "Add new todo", new_todo_path %></p>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Status</th>
-    <th>Due Date</th>
-    <th>Actions</th>
+    <th class="title">Title</th>
+    <th class="date">Due Date</th>
+    <th class="actions">Actions</th>
   </tr>
   <% @todos.each do |todo| %>
     <tr class="<%= todo.completed ? "completed" : "uncompleted" %>">
@@ -17,4 +16,3 @@
     </tr>
   <% end %>
 </table>
-
