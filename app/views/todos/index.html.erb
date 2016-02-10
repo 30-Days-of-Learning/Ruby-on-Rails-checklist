@@ -5,6 +5,7 @@
   <tr>
     <th>Title</th>
     <th>Status</th>
+    <th>Due Date</th>
     <th>Actions</th>
   </tr>
   <% @todos.each do |todo| %>
@@ -13,6 +14,7 @@
         <td><%= link_to todo.title, edit_todo_path(todo) %></td>
         <td><%= todo.completed %></td>
         <td><%= link_to '✓', todo_path(todo), method: :patch %> <%= link_to '×', [todo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= todo.duedate %></td>
       </tr>
     <% end %>
   <% end %>
@@ -24,6 +26,7 @@
   <tr>
     <th>Title</th>
     <th>Status</th>
+    <th>Due Date</th>
     <th>Actions</th>
   </tr>
   <% @todos.each do |todo| %>
@@ -32,6 +35,7 @@
         <td><%= link_to todo.title, edit_todo_path(todo) %></td>
         <td><%= todo.completed %></td>
         <td><%= link_to '✓', todo_path(todo), method: :patch %> <%= link_to '×', [todo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= todo.duedate %></td>
       </tr>
     <% end %>
   <% end %>
