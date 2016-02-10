@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'todos/index'
 
-  patch 'todos/:id', to: 'todos#complete'
+  get 'todos/:id/complete' => 'todos#complete', as: :completed
   resources :todos
 
   root 'todos#index'

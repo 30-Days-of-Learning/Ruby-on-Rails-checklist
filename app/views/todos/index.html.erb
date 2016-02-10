@@ -13,8 +13,8 @@
       <tr>
         <td><%= link_to todo.title, edit_todo_path(todo) %></td>
         <td><%= todo.completed %></td>
-        <td><%= link_to '✓', todo_path(todo), method: :patch %> <%= link_to '×', [todo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= todo.duedate %></td>
+        <td><%= link_to '✓', todo_path(todo) + '/complete/' %> <%= link_to '×', [todo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   <% end %>
@@ -34,8 +34,8 @@
       <tr class="completed">
         <td><%= link_to todo.title, edit_todo_path(todo) %></td>
         <td><%= todo.completed %></td>
-        <td><%= link_to '✓', todo_path(todo), method: :patch %> <%= link_to '×', [todo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= todo.duedate %></td>
+        <td><%= link_to '✓', todo_path(todo) + '/complete/' %> <%= link_to '×', [todo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   <% end %>
