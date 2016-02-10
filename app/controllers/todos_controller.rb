@@ -42,7 +42,7 @@ class TodosController < ApplicationController
   def complete
     @todo = Todo.find(params[:id])
 
-    if @todo.completed?
+    if request.path.include? 'uncomplete'
       if @todo.update(completed: false)
         redirect_to todos_path
       else

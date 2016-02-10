@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'todos/index'
 
   get 'todos/:id/complete' => 'todos#complete', as: :completed
+  get 'todos/:id/uncomplete' => 'todos#complete', as: :uncompleted
   resources :todos
 
   root 'todos#index'
