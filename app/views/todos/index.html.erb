@@ -11,7 +11,7 @@
   <% @todos.each do |todo| %>
     <tr class="<%= todo.completed ? "completed" : "uncompleted" %>">
       <td class="title"><%= link_to todo.title, edit_todo_path(todo) %></td>
-      <td class="date"><%= todo.duedate %></td>
+      <td class="date"><%= todo.duedate %><%= (todo.duedate < Time.now) && (todo.completed != true) ? ' <span class="overdue">Overdue</span>'.html_safe : '' %></td>
       <td class="actions"><%= link_to '✓', todo.completed ? uncompleted_path(todo) : completed_path(todo) %> <%= link_to '×', [todo], method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
