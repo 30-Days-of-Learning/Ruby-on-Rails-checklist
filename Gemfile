@@ -29,6 +29,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# Use puma as the app server for Heroku
+gem 'puma'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
