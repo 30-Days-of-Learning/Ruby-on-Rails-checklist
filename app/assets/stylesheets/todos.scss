@@ -55,3 +55,8 @@ td {
   color: gray;
 }
 
+.overdue {
+  color: $link-color;
+  font-size: smaller;
+  font-weight: bold;
+}
